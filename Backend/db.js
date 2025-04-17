@@ -1,6 +1,5 @@
 const mongoose=require("mongoose");
-const mongoURI=`mongodb+srv://Anshul1807:Verma1807@cluster0.8cznrhv.mongodb.net/GoFood?retryWrites=true&w=majority&appName=Cluster0`
-
+const mongoURI=process.env.MONGOURI;
 
 
 const mongoDB = async () => {
@@ -24,8 +23,5 @@ const mongoDB = async () => {
     } catch (err) {
         console.log("Error connecting to MongoDB:", err);
     }
-             
-        
-
 }
 module.exports=mongoDB;
